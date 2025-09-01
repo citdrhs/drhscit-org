@@ -1,73 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintenance Notice</title>
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #162b50, #1f3d63, #bdc3c7);
+    <title>CIT Project Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --font-family-geist: "Geist", system-ui, sans-serif;
         }
-
-        .container {
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            color: #162b50;
-        }
-
-        ol {
-            list-style: none;
-            padding: 0;
-        }
-
-        ol li {
-            margin: 10px 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #337ab7;
-            font-weight: bold;
-        }
-
-	u {
-	    color: #337ab7;
-	}
-
-        a:hover {
-            color: #23527c;
-            text-decoration: underline;
+        
+        .font-geist {
+            font-family: var(--font-family-geist);
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <h1>The CIT website is currently under maintenance</h1>
-        <p>Please select one of the following websites:</p>
-        <ol>
-            <li><u><a href="/cshs">Computer Science Honor Society</a></li>
-            <li><a href="/drwc">Deep Run Writing Center</a></li>       
-            <li><a href="/drcc/">Computer Club</a></li>
-	    <li><a href="/drcs">Carnation Sales</a></u></li>
-	    <li><u><a href="/dren">English Blog</a></u></li>
-            <li><u><a href="/drad">CIT Testing</a></u></li>
-            <li><u><a href="/automaton">Automaton</a></u></li>
-	    <li><u><a href="/drmb">CIT Message Board</a></u></li>
-	    <li><u><a href="/drss">Soccer Stats</a></u></li>
-        </ol>
+
+<body class="min-h-screen flex justify-center items-center bg-gradient-to-br from-slate-100 to-blue-100 flex-col">
+
+    <!-- Header Section -->     
+    <div class="w-full max-w-[1500px]">
+
+        <div class="flex justify-between w-full  items-center p-10 flex-col lg:flex-row mt-10">
+            
+            <div class="flex flex-col">
+                <p class="xl:text-8xl text-6xl font-extrabold tracking-tighter font-geist text-left bg-gradient-to-r from-blue-600 to-slate-700 bg-clip-text text-transparent">
+                    CIT Project Showcase.
+                </p>
+                <p class="text-sm text-gray-600 mt-2 mb-2 ml-2 max-w-4xl leading-relaxed">
+                    Each spring, sophomores and juniors collaborate in teams of 5–8 on projects from outside
+                    organizations, with juniors as project leads and sophomores as project managers, while all members
+                    contribute significantly. Using Scrum methodologies, teams work over three months to create
+                    websites, apps, or hardware. This is a showcase of the projects that the students have worked on.
+                </p>
+                <div class="text-md flex italic text-gray-700 gap-2 ml-2">
+                    <a href="https://teachers.henrico.k12.va.us/deeprun/cit/"
+                        class="hover:text-blue-600 flex items-center gap-1">
+                        <i data-lucide="square-arrow-out-up-left" class="w-3 h-3"></i>
+                        Home
+                    </a>
+                    <a href="#projects" class="hover:text-blue-600 flex items-center gap-1">
+                        <i data-lucide="folder" class="w-3 h-3"></i>
+                        Projects
+                    </a>
+                </div>
+            </div>
+            <div class="relative lg:mr-10 hidden lg:block">
+                <img src="./cit_logo.png" alt="CIT Logo" class="w-24">
+                <span class="absolute -top-8 -right-8 text-4xl transform rotate-12">🐘</span>
+                <span class="absolute -left-7 -bottom-7 text-4xl transform -rotate-12">💻</span>
+                <span class="absolute -right-8 -bottom-8 text-4xl transform rotate-12">📂</span>
+            </div>
+        </div>
     </div>
+
+    <!-- Project Cards Section -->
+    <div id="projects" class="w-full max-w-[1500px] mx-auto px-6 py-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Project Card 1 - CSHS -->
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-4">
+                    <div class="bg-slate-800 rounded-lg p-3 shadow-xl">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div class="flex-1 bg-slate-700 rounded px-3 py-1 ml-4">
+                                <div class="w-24 h-2 bg-slate-600 rounded"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded aspect-video overflow-hidden">
+                            <img src="./project_showcases/cshs.png" alt="Computer Science Honor Society Preview"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-geist font-semibold text-lg text-gray-900 mb-3">Computer Science Honor Society
+                        (CSHS)</h4>
+                    <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                        A student-run honor society recognizing academic excellence in CS; members are inducted annually
+                        and engage in tutoring and service initiatives.
+                    </p>
+                    <a href="https://drhscit.org/cshs"
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors text-sm">
+                        View Project
+                        <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 2 - LitBlog -->
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-4">
+                    <div class="bg-slate-800 rounded-lg p-3 shadow-xl">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div class="flex-1 bg-slate-700 rounded px-3 py-1 ml-4">
+                                <div class="w-24 h-2 bg-slate-600 rounded"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded aspect-video overflow-hidden">
+                            <img src="./project_showcases/litblog.png" alt="English Blog - LitBlog Preview"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-geist font-semibold text-lg text-gray-900 mb-3">
+                        English Blog - LitBlog
+                    </h4>
+                    <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                        A school-based blogging platform featuring student essays, reflections, and literary
+                        commentary—designed to foster writing skills and creative expression.
+                    </p>
+                    <a href="https://drhscit.org/dren"
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors text-sm">
+                        View Project
+                        <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 3 - CIT Message Board -->
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-4">
+                    <div class="bg-slate-800 rounded-lg p-3 shadow-xl">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div class="flex-1 bg-slate-700 rounded px-3 py-1 ml-4">
+                                <div class="w-24 h-2 bg-slate-600 rounded"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded aspect-video overflow-hidden">
+                            <img src="./project_showcases/messageboard.png" alt="CIT Message Board Preview"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-geist font-semibold text-lg text-gray-900 mb-2">CIT Message Board</h4>
+                    <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                        A collaborative announcement board where users upload custom slides (Google Slides → PNG), with
+                        live-view and admin features.
+                    </p>
+                    <a href="https://drhscit.org/drmb"
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors text-sm">
+                        View Project
+                        <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 4 - Soccer Stats -->
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-4">
+                    <div class="bg-slate-800 rounded-lg p-3 shadow-xl">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div class="flex-1 bg-slate-700 rounded px-3 py-1 ml-4">
+                                <div class="w-24 h-2 bg-slate-600 rounded"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded aspect-video overflow-hidden">
+                            <img src="./project_showcases/soccerstats.png" alt="Soccer Stats Preview"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-geist font-semibold text-lg text-gray-900 mb-2">Soccer Stats</h4>
+                    <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                        A secure portal for tracking Deep Run girls' soccer team stats—restricted to authorized users.
+                    </p>
+                    <a href="https://drhscit.org/drss"
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors text-sm">
+                        View Project
+                        <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 5 - Deep Run Writing Center -->
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-4">
+                    <div class="bg-slate-800 rounded-lg p-3 shadow-xl">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div class="flex-1 bg-slate-700 rounded px-3 py-1 ml-4">
+                                <div class="w-24 h-2 bg-slate-600 rounded"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded aspect-video overflow-hidden">
+                            <img src="./project_showcases/writingcenter.png" alt="Deep Run Writing Center Preview"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-geist font-semibold text-lg text-gray-900 mb-3">Deep Run Writing Center</h4>
+                    <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                        A student-supportive peer writing center offering feedback sessions on writing during school
+                        lunch hours in Room 212.
+                    </p>
+                    <a href="https://drhscit.org/drwc"
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors text-sm">
+                        View Project
+                        <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 6 - GRIT Conference -->
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-4">
+                    <div class="bg-slate-800 rounded-lg p-3 shadow-xl">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div class="flex-1 bg-slate-700 rounded px-3 py-1 ml-4">
+                                <div class="w-24 h-2 bg-slate-600 rounded"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded aspect-video overflow-hidden">
+                            <img src="./project_showcases/gritconference.png" alt="GRIT Conference Preview"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-geist font-semibold text-lg text-gray-900 mb-3">GRIT Conference</h4>
+                    <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                        A signature CIT event providing students with conference-style exposure to IT professionals,
+                        vendors, alumni, and college reps; featured a keynote by Dr. Vint Cerf.
+                    </p>
+                    <a href="https://drhscit.org/grit"
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors text-sm">
+                        View Project
+                        <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 7 - Automaton -->
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-4">
+                    <div class="bg-slate-800 rounded-lg p-3 shadow-xl">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div class="flex-1 bg-slate-700 rounded px-3 py-1 ml-4">
+                                <div class="w-24 h-2 bg-slate-600 rounded"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded aspect-video overflow-hidden">
+                            <img src="./project_showcases/automaton.png" alt="Automaton Preview"
+                                class="w-full h-full object-cover" />
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-geist font-semibold text-lg text-gray-900 mb-3">Automaton</h4>
+                    <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                        A packaging game
+                    </p>
+                    <a href="https://drhscit.org/automaton/"
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors text-sm">
+                        View Project
+                        <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 8 - Computer Club -->
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-4">
+                    <div class="bg-slate-800 rounded-lg p-3 shadow-xl">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div class="flex-1 bg-slate-700 rounded px-3 py-1 ml-4">
+                                <div class="w-24 h-2 bg-slate-600 rounded"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded aspect-video overflow-hidden flex items-center justify-center">
+                            <p class="text-gray-500 font-medium text-lg">Under Maintenance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-geist font-semibold text-lg text-gray-900 mb-3">Computer Club</h4>
+                    <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                        A student organization focused on programming, technology, and exploration.
+                    </p>
+                    <a href="https://drhscit.org/drcc/"
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors text-sm">
+                        View Project
+                        <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project Card 9 - Carnation Sales -->
+            <div class="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+                <div class="bg-gradient-to-br from-slate-100 to-slate-200 p-4">
+                    <div class="bg-slate-800 rounded-lg p-3 shadow-xl">
+                        <div class="flex items-center space-x-2 mb-3">
+                            <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                            <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                            <div class="flex-1 bg-slate-700 rounded px-3 py-1 ml-4">
+                                <div class="w-24 h-2 bg-slate-600 rounded"></div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded aspect-video overflow-hidden flex items-center justify-center">
+                            <p class="text-gray-500 font-medium text-lg">Under Maintenance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <h4 class="font-geist font-semibold text-lg text-gray-900 mb-3">Carnation Sales</h4>
+                    <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                        A fundraising platform for managing carnation sales.
+                    </p>
+                    <a href="https://drhscit.org/drcs/"
+                        class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors text-sm">
+                        View Project
+                        <i data-lucide="external-link" class="ml-1 w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
+
 </html>
